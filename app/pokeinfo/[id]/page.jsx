@@ -74,7 +74,7 @@ export default async function PokemonInfo({ params }) {
   };
 
   return (
-    <div className="mx-auto min-h-screen space-y-6 px-5 py-10 md:w-full overflow-y-hidden" style={backgroundStyle}>
+    <div className="mx-auto h-screen space-y-6 px-5 py-10 md:w-full" style={backgroundStyle}>
       <section className="flex flex-col justify-start">
         <div className="md:ml-8 md:mt-12 md:flex md:w-1/4 md:flex-col md:gap-2">
           <p className="text-xs text-white md:text-2xl md:font-medium">
