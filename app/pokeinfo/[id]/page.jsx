@@ -74,7 +74,7 @@ export default async function PokemonInfo({ params }) {
   };
 
   return (
-    <div className="mx-auto h-screen space-y-6 px-5 py-10 md:w-full" style={backgroundStyle}>
+    <div className="mx-auto min-h-screen md:h-screen space-y-6 px-5 py-10 md:w-full" style={backgroundStyle}>
       <section className="flex flex-col justify-start">
         <div className="md:ml-8 md:mt-12 md:flex md:w-1/4 md:flex-col md:gap-2">
           <p className="text-xs text-white md:text-2xl md:font-medium">
@@ -100,7 +100,7 @@ export default async function PokemonInfo({ params }) {
               height={500}
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`}
               alt={name}
-              className="mb-4 mt-5 md:mr-44 md:h-[32rem] md:w-[32rem]"
+              className="h-96 w-96 mb-4 mt-5 md:mr-44 md:h-[32rem] md:w-[32rem]"
             />
           </div>
           <div className="flex flex-col items-center justify-center gap-2 md:flex md:w-1/4 md:items-start">
