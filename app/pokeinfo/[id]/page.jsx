@@ -45,7 +45,7 @@ const icons = {
 };
 
 export default async function PokemonInfo({ params }) {
-  const { id } = params;
+  const { id } = await params;
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
   const data = await res.json();
   const pokemonId = data.id;
@@ -74,9 +74,9 @@ export default async function PokemonInfo({ params }) {
   };
 
   return (
-    <div className="mx-auto min-h-screen space-y-6 px-5 py-10 md:w-full" style={backgroundStyle}>
+    <div className="mx-auto min-h-screen space-y-6 px-5 py-10 md:w-full overflow-y-hidden" style={backgroundStyle}>
       <section className="flex flex-col justify-start">
-        <div className="mb-8 md:ml-8 md:mt-12 md:flex md:w-1/4 md:flex-col md:gap-2">
+        <div className="md:ml-8 md:mt-12 md:flex md:w-1/4 md:flex-col md:gap-2">
           <p className="text-xs text-white md:text-2xl md:font-medium">
             #{pokemonId}
           </p>
@@ -100,7 +100,7 @@ export default async function PokemonInfo({ params }) {
               height={500}
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`}
               alt={name}
-              className="mb-4 mt-5 md:mr-44 md:h-96 md:w-96"
+              className="mb-4 mt-5 md:mr-44 md:h-[32rem] md:w-[32rem]"
             />
           </div>
           <div className="flex flex-col items-center justify-center gap-2 md:flex md:w-1/4 md:items-start">
